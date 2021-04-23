@@ -1,0 +1,90 @@
+{
+  "extends": [
+    "react-app",
+    "react-app/jest",
+    "prettier",
+    "prettier/react"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "**/*.stories.*"
+      ],
+      "rules": {
+        "import/no-anonymous-default-export": "off"
+      }
+    },
+    {
+      "files": [
+        "**/*.test.*"
+      ],
+      "rules": {
+        "max-lines-per-function": "off",
+        "max-lines": "off",
+      }
+    }
+  ],
+  "rules": {
+    "object-curly-spacing": ["warn", "always"],
+    "max-len": [
+      "warn",
+      {
+        "code": 80,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true,
+        "ignoreComments": true
+      }
+    ],
+    "max-lines": [
+      "error",
+      {
+        "max": 120
+      }
+    ],
+    "max-lines-per-function": [
+      "error",
+      {
+        "max": 50
+      }
+    ],
+    "max-params": [
+      "error",
+      {
+        "max": 3
+      }
+    ],
+    "complexity": [
+      "error",
+      5
+    ],
+    "no-else-return": [
+      "error",
+      {
+        "allowElseIf": false
+      }
+    ],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "**/*.test.js",
+          "**/*.test.jsx",
+          "**/*.test.ts",
+          "**/*.test.tsx",
+          "src/tests/**/*"
+        ]
+      }
+    ],
+    "import/no-named-as-default": "off",
+    "import/prefer-default-export": "off",
+    "react/jsx-key": "error",
+    "react/jsx-props-no-spreading": "off",
+    "react/jsx-boolean-value": "off",
+    "react/prop-types": "off",
+    "react/no-unescaped-entities": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "react/jsx-wrap-multilines": "off",
+    "react/destructuring-assignment": "off",
+    "react-hooks/exhaustive-deps":"off"
+  }
+}
